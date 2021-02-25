@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <div *ngIf="!registerMode" style="text-align: center;">
+        <h1>Distribuidora de huevos Avícola San Andrés</h1>
+        <p class="lead">Venta de huevo sabanero Directo de Granja por mayor y al detal. Los llevamos a la puerta de tu casa. Domicilios gratis.. Solo debes registrarte!</p>
+        <div class="text-center">
+            <button (click) = "registerToggle()" class="btn btn-primary btn-lg mr-2">Registrarse</button>
+            <button class="btn btn-info btn-lg">Pagos</button>
+        </div>
+    </div>
+    <div *ngIf="registerMode" class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <!-- <app-register [usersFromHomeComponent]="users" (cancelRegister)="cancelRegisterMode($event)"></app-register> -->
+                <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+            </div>
+        </div>
+    </div>
+</div>
