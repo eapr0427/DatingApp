@@ -2,6 +2,6 @@ import { stringify } from "@angular/compiler/src/util"
 
 export interface User
 {
-    username: string;
+    userName: string;
     token: string;
 }
